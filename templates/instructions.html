@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructions - Excel to Audio Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img class="navbar-toggler-icon"  src="/static/Excel_to_Audio2.jpeg" alt="icon-brand"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/instructions">Instructions <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <button id="themeToggle" class="btn btn-outline-secondary">Dark Theme</button>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card p-4">
+                    <h1 class="mb-4">Instructions</h1>
+                    <p>To use this application, your Excel sheet should be formatted as follows:</p>
+                    <table class="table table-bordered table-dark table-hover table-responsive">
+                        <thead>
+                            <tr>
+                                <th>Question</th>
+                                <th>Option A</th>
+                                <th>Option B</th>
+                                <th>Option C</th>
+                                <th>Option D</th>
+                                <th>Answer</th>
+                                <th>Explanation</th>
+                                <th>Pause After Question (sec)</th>
+                                <th>Pause After Options (sec)</th>
+                                <th>Pause After Answer (sec)</th>
+                                <th>Pause After Explanation (sec)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>What is the capital of France?</td>
+                                <td>Paris</td>
+                                <td>London</td>
+                                <td>Berlin</td>
+                                <td>Madrid</td>
+                                <td>Paris</td>
+                                <td>Paris is the capital and most populous city of France.</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Ensure that your Excel sheet follows this format for the application to process it correctly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Apply the saved theme on page load
+            const savedTheme = localStorage.getItem('theme') || 'theme-light';
+            $('body').addClass(savedTheme);
+            $('#themeToggle').text(savedTheme === 'theme-light' ? 'Dark Theme' : 'Light Theme');
+
+            $('#themeToggle').on('click', function() {
+                var body = $('body');
+                if (body.hasClass('theme-light')) {
+                    body.removeClass('theme-light').addClass('theme-dark');
+                    $(this).text('Light Theme');
+                    localStorage.setItem('theme', 'theme-dark');
+                } else {
+                    body.removeClass('theme-dark').addClass('theme-light');
+                    $(this).text('Dark Theme');
+                    localStorage.setItem('theme', 'theme-light');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

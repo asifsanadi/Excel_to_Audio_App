@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.theme-dark {
+    background-color: #343a40;
+    color: white;
+}
+
+.theme-dark .navbar, .theme-dark .card {
+    background-color: #343a40;
+    color: white;
+}
+
+.theme-dark .navbar a, .theme-dark .card a {
+    color: white;
+}
+
+.theme-dark .btn {
+    background-color: #495057;
+    color: white;
+}
+
+.theme-dark .btn:hover {
+    background-color: #6c757d;
+}
+
+.theme-light {
+    background-color: white;
+    color: black;
+}
+
+.theme-light .navbar, .theme-light .card {
+    background-color: white;
+    color: black;
+}
+
+.theme-light .navbar a, .theme-light .card a {
+    color: black;
+}
+
+.theme-light .btn {
+    background-color: #f8f9fa;
+    color: black;
+}
+
+.theme-light .btn:hover {
+    background-color: #e2e6ea;
+}

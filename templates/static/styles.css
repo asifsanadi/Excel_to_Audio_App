@@ -1,0 +1,72 @@
+body.theme-dark {
+    background-color: #343a40;
+    color: white;
+}
+
+body.theme-dark .navbar, body.theme-dark .card {
+    background-color: #343a40;
+    color: white;
+}
+
+body.theme-dark .navbar a, body.theme-dark .card a {
+    color: white;
+}
+
+body.theme-dark .btn {
+    background-color: #495057;
+    color: white;
+}
+
+body.theme-dark .btn:hover {
+    background-color: #6c757d;
+}
+
+body.theme-dark .table {
+    color: white;
+}
+
+body.theme-light {
+    background-color: white;
+    color: black;
+}
+
+body.theme-light .navbar, body.theme-light .card {
+    background-color: white;
+    color: black;
+}
+
+body.theme-light .navbar a, body.theme-light .card a {
+    color: black;
+}
+
+body.theme-light .btn {
+    background-color: #f8f9fa;
+    color: black;
+}
+
+body.theme-light .btn:hover {
+    background-color: #e2e6ea;
+}
+
+body.theme-light .table {
+    color: black;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    border: 2px solid;
+    padding: 5px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet) 1;
+}
+
+body.theme-dark .navbar-brand {
+    border-color: white;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet) 1;
+}
